@@ -1,0 +1,94 @@
+/* body {
+  background: linear-gradient(to right, #223344, #445566);
+  color: #fff; /* Color de texto claro para que contraste con el fondo 
+  }
+*/
+/* Estilos generales */
+/*body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Ejemplo de tipografía sans-serif */
+ /* margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #223344, #718294);
+  color: #fff;
+  background-image: "./fondo.jpg";
+}*/
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Ejemplo de tipografía sans-serif */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #223344, #718294);
+  color: #fff;
+  background-image: "./fondo.jpg"; /* Ruta de tu imagen */
+  background-size: cover; /* La imagen cubre todo el fondo */
+  background-position: center; /* La imagen se centra */
+  background-repeat: no-repeat; /* La imagen no se repite */
+}
+
+body::after {
+  content: ''; /* Pseudoelemento para aplicar el degradado */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 0; /* Posición superior */
+  left: 0; /* Posición izquierda */
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%); /* Degradado radial de negro transparente */
+  opacity: 0.7; /* Opacidad del degradado */
+}
+
+header {
+   background: linear-gradient(to right,#23aa4c76,#718294 ); /* Color de fondo para el encabezado */
+  color: #fff; /* Color de texto claro para el encabezado */
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
