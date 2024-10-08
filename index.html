@@ -412,18 +412,106 @@
       <span data-lang="en">&copy; 2024 2024 Claudio Martin Herranz. All rights reserved.</span>
     </p>
   </footer>
-
   <script>
-    function updateCVDownload(lang) {
-      const cvLink = document.getElementById('cv-download');
-      if (lang === 'es') {
-        cvLink.href = 'cv-claudimartin-esp.pdf';
-        cvLink.download = 'cv-claudimartin-esp.pdf';
-      } else {
-        cvLink.href = 'cv-claudimartin-eng.pdf';
-        cvLink.download = 'cv-claudimartin-eng.pdf';
-      }
+  function updateCVDownload(lang) {
+    const cvLink = document.getElementById('cv-download');
+    if (cvLink) {
+      const fileName = lang === 'es' ? 'cv-claudimartin-esp.pdf' : 'cv-claudimartin-eng.pdf';
+      cvLink.href = fileName;
+      cvLink.download = fileName;
     }
+  }
+
+  function changeLanguage(lang) {
+    const links = document.querySelectorAll("header nav ul li a");
+    links.forEach((link) => {
+      const title = link.getAttribute(`data-title-${lang}`);
+      link.setAttribute("title", title);
+    });
+
+    const elements = document.querySelectorAll("[data-lang]");
+    elements.forEach((element) => {
+      element.style.display = element.getAttribute("data-lang") === lang ? "" : "none";
+    });
+
+    document.documentElement.lang = lang;
+    const languageSelector = document.getElementById("languageSelector");
+    if (languageSelector) {
+      languageSelector.value = lang;
+    }
+
+    updateCVDownload(lang);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const languageSelector = document.getElementById("languageSelector");
+    if (languageSelector) {
+      languageSelector.addEventListener("change", (event) => {
+        changeLanguage(event.target.value);
+      });
+    }
+    changeLanguage("es");
+
+    const toggleButton = document.getElementById("toggleSkills");
+    const skillsContent = document.querySelector(".skills-content");
+    if (toggleButton && skillsContent) {
+      toggleButton.addEventListener("click", function () {
+        skillsContent.classList.toggle("expanded");
+        const isExpanded = skillsContent.classList.contains("expanded");
+        toggleButton.querySelector('[data-lang="es"]').textContent = isExpanded ? "Mostrar menos" : "Mostrar más";
+        toggleButton.querySelector('[data-lang="en"]').textContent = isExpanded ? "Show less" : "Show more";
+      });
+    }
+
+    let hue = 0;
+    function changeBorderColor() {
+      const paragraphs = document.querySelectorAll(".dynamic-border");
+      hue = (hue + 1) % 360;
+      const color = `hsl(${hue}, 100%, 50%)`;
+      paragraphs.forEach((paragraph) => {
+        paragraph.style.borderColor = color;
+      });
+    }
+    setInterval(changeBorderColor, 50);
+
+    const links = document.querySelectorAll("a[href^='#']");
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const startPosition = window.pageYOffset;
+          const targetPosition = targetElement.offsetTop;
+          const distance = targetPosition - startPosition;
+          const duration = 750;
+          let start = null;
+          function animate(currentTime) {
+            if (!start) start = currentTime;
+            const progress = currentTime - start;
+            if (progress > duration) return;
+            window.scrollTo(0, startPosition + distance * (progress / duration));
+            requestAnimationFrame(animate);
+          }
+          requestAnimationFrame(animate);
+        }
+      });
+    });
+
+    document.body.style.zoom = "70%";
+  });
+</script>
+  <!-- <script>
+    function updateCVDownload(lang) {
+    const cvLink = document.getElementById('cv-download');
+    if (lang === 'es') {
+      cvLink.href = 'cv-claudimartin-esp.pdf';
+      cvLink.download = 'cv-claudimartin-esp.pdf';
+    } else {
+      cvLink.href = 'cv-claudimartin-eng.pdf';
+      cvLink.download = 'cv-claudimartin-eng.pdf';
+    }
+  }
     function changeLanguage(lang) {
       const links = document.querySelectorAll("header nav ul li a");
       links.forEach((link) => {
@@ -442,6 +530,12 @@
       const languageSelector = document.getElementById("languageSelector");
       languageSelector.value = lang;
       document.body.offsetHeight;
+      
+
+  languageSelector.addEventListener("change", (event) => {
+    changeLanguage(event.target.value);
+  });
+
     }
     document.addEventListener("DOMContentLoaded", () => {
       const languageSelector = document.getElementById("languageSelector");
@@ -523,7 +617,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       document.body.style.zoom = "70%";
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
