@@ -1,207 +1,557 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bienvenid@ a chat app</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/welcome.styles.css">
-  </head>
-  <body>
-    
-  <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-2 border-bottom">
-      <div class="col-md-3 mb-2 mb-md-0">
-        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-          <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-        </a>
-      </div>
-      <div class="col-md-3 text-end">
-        <a class="btn btn-outline-primary me-2" href="api/users/login">Acceder</a>
-        <a class="btn btn-custom" href="api/users/signup">Regístrate</a>
-      </div>
-    </header>
-  </div>  
-    <main>
-      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>        
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-          <img width="cover" height="fit-content" src="./img/itacademywood.jpg" alt="Imagen 1">
-              <rect width="100%" height="100%" fill="#777" />
-            </svg>
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Bienvenid@ al Chat de la ITAcademy</h1>
-                <p>
-                 Aquí podrás encontrarte con tus compañeros, ex-alumnos y demás gente apasionada del mundo de la programación. Un espacio para compartir, debatir y ayudarse mutuamente a crecer en esta gran industria IT.
-                </p>
-                <p><a class="btn btn-custom" href="api/users/signup">Regístrate</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img width="cover" src="./img/cibernarium.jpg" alt="Imagen 1">
-              <rect width="100%" height="100%" fill="#777" />
-            </svg>
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>No esperes más, entra a chatear.</h1>
-                <p>
-                  No esperes más, tus contactos quieren saludarte.
-                </p>
-                <p><a class="btn btn-custom" href="api/users/login">Acceder</a></p>
-              </div>
-            </div>
-          </div>       
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
-      </div>
-      <div class="container marketing">
-        <div class="row">
-          <div class="col-lg-4 center-content">
-            <img
-              class="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140"
-              src="./img/itlogo2.png"
-              role="img"
-              aria-label="Placeholder"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <rect width="100%" height="100%" fill="#868e96" />
-            </img>
-            <h2 class="fw-normal">IT Academy</h2>
-            <p>La prestigiosa academia TIC de Barcelona Activa, uno de los Bootcamps mejor valorados de la actualidad, con un personal docente al nivel de la categoría de la escuela.</p>
-            <p>
-              <a class="btn btn-secondary" href="https://itacademy.barcelonactiva.cat/login/index.php">Ir a la web &raquo;</a>
-            </p>
-          </div>
-          <div class="col-lg-4 center-content">
-            <img
-              class="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140"
-              src="./img/github.png"
-              role="img"
-              aria-label="Placeholder"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <rect width="100%" height="100%" fill="#868e96" />
-            </img>
-            <h2 class="fw-normal">GitHub</h2>
-            <p>Aquí podrás encontrar todo mi código. Desde los ejercicios que realicé en Fonaments de la Programació, hasta este último proyecto de la especialización en NodeJS</p>
-            <p>
-              <a class="btn btn-secondary" href="https://github.com/ClaudioMartinH">Visitar GitHub &raquo;</a>
-            </p>
-          </div>
-          <div class="col-lg-4 center-content">
-            <img
-              class="bd-placeholder-img rounded-circle"
-              width="140"
-              height="140"
-              src="./img/logo.png"
-              role="img"
-              aria-label="Placeholder"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <rect width="100%" height="100%" fill="#868e96" />
-            </img>
-            <h2 class="fw-normal">Contacto</h2>
-            <p>Aquí podrás contactar directamente conmigo en el mail, ya sea por incidencias o para contratación.</p>
-            <p>
-              <a class="btn btn-secondary" href="mailto:martinherranzc@gmail.com?subject=Soporte%20Técnico&body=Hola%2C%20necesito%20ayuda%20con%20el%20problema%20X.">Escribir correo &raquo;</a>
-            </p>
-          </div>
-        </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
-
-<!-- <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claudio Martin H - Desarrollador Web</title>
-    <link rel="stylesheet" href="./css/estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio IT | My IT Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    /> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    /> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
+
 <body>
-    <header>
-        <h1>Claudio Martin H</h1>
-        <h2>Desarrollador Web</h2>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#inicio" data-title-es="Inicio" data-title-en="Home">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#sobre-mi" data-title-es="Sobre Mí" data-title-en="About Me">
+            <i class="fas fa-user"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#habilidades" data-title-es="Habilidades" data-title-en="Skills">
+            <i class="fas fa-cogs"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#courses" data-title-es="Formación" data-title-en="Formation">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#proyectos" data-title-es="Proyectos" data-title-en="Projects">
+            <i class="fas fa-project-diagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#contacto" data-title-es="Contacto" data-title-en="Contact">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+      <select id="languageSelector">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </nav>
+  </header>
+  <!-- <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#inicio" data-lang="es">Inicio</a
+            ><a href="#inicio" data-lang="en">Home</a>
+          </li>
+          <li>
+            <a href="#sobre-mi" data-lang="es">Sobre Mí</a
+            ><a href="#sobre-mi" data-lang="en">About Me</a>
+          </li>
+          <li>
+            <a href="#habilidades" data-lang="es">Habilidades</a
+            ><a href="#habilidades" data-lang="en">Skills</a>
+          </li>
+          <li>
+            <a href="#courses" data-lang="es">Formación</a
+            ><a href="#courses" data-lang="en">Courses</a>
+          </li>
+          <li>
+            <a href="#proyectos" data-lang="es">Proyectos</a
+            ><a href="#proyectos" data-lang="en">Projects</a>
+          </li>
+          <li>
+            <a href="#contacto" data-lang="es">Contacto</a
+            ><a href="#contacto" data-lang="en">Contact</a>
+          </li>
+        </ul>
+        <select id="languageSelector">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+      </nav>
+    </header> -->
 
-    <main>
-        <section id="presentacion">
-            <img src="https://picsum.photos/200/300?random" alt="Foto de Claudio Martin H"> <p>Soy un desarrollador web junior con experiencia en Node.js, dominio de bases de datos como MySQL y MongoDB, y frameworks como Express. Me apasiona crear aplicaciones web dinámicas y escalables.</p>
+  <main>
+ <section id="inicio">
+  <h1>
+    <span data-lang="es">Bienvenido a mi Portafolio IT</span>
+    <span data-lang="en">Welcome to my IT Portfolio</span>
+  </h1>
+  <div class="personal-info">
+    <h2>Claudio Martín Herranz</h2>
+    <p class="job-title">
+      <span data-lang="es">Desarrollador de Software</span>
+      <span data-lang="en">Software Developer</span>
+    </p>
+  </div>
+</section>
+
+    <section id="sobre-mi">
+      <h2>
+        <span data-lang="es">Sobre Mí</span>
+        <span data-lang="en">About Me</span>
+      </h2>
+      <p>
+        <span data-lang="es" style="color: black">
+          Soy un desarrollador de software apasionado por la tecnología,
+          especializado en desarrollo web con Node.js, y con experiencia en
+          diferentes tecnologías. Me encanta enfrentar nuevos desafíos y
+          crecer con ellos. Tengo una gran capacidad de autoaprendizaje y
+          disfruto conociendo a fondo todas las tecnologías que utilizo.
+        </span>
+        <span data-lang="en" style="color: black">
+          I am a software developer passionate about technology, specialized
+          in web development with Node.js, and experienced in various
+          technologies. I love facing new challenges and growing with them. I
+          have strong self-learning skills and enjoy getting to know in-depth
+          all the technologies I work with.
+        </span>
+      </p>
+    </section>
+
+    <section id="habilidades">
+      <h2>
+        <span data-lang="es">Mis Habilidades Técnicas</span>
+        <span data-lang="en">My Tech Stack</span>
+      </h2>
+      <ul>
+        <li>Node.js</li>
+        <li>Express</li>
+        <li>Typescript</li>
+        <li>JavaScript</li>
+        <li>MongoDB</li>
+        <li>SQL</li>
+        <li>React</li>
+        <li>Socket.io</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Git</li>
+      </ul>
+    </section>
+    <section id="sobre-mi">
+      <h2>
+        <span data-lang="es">Mis Aptitudes</span>
+        <span data-lang="en">My Soft Skills</span>
+      </h2>
+      <button id="toggleSkills">
+        <span data-lang="es">Mostrar más</span>
+        <span data-lang="en">Show more</span>
+      </button>
+      <div class="skills-content collapsed">
+        <p>
+          <span data-lang="es">Enfrentar desafíos y trabajar en proyectos en equipo es una
+            habilidad que me aporta a la mejora de mi productividad y la
+            creación de un ambiente de trabajo más colaborativo.</span>
+          <span data-lang="en">Facing challenges and working on team projects is a skill that
+            contributes to improving my productivity and creating a more
+            collaborative work environment.</span>
+        </p>
+        <div class="skills-details">
+          <span data-lang="es">
             <ul>
-                <li>Habilidades:</li>
-                <li>Node.js</li>
-                <li>MySQL</li>
-                <li>MongoDB</li>
-                <li>Express</li>
-                <li>HTML, CSS y JavaScript</li>
+              <li>
+                <p>Liderazgo y trabajo en equipo</p>
+                <p>
+                  En mi extensa trayectoria como responsable de equipos en
+                  hostelería, he aprendido a la perfección lo que es tratar y
+                  acompañar a los compañeros para cumplir un objetivo común.
+                  Siempre he creído que un <b>líder</b> debe ser aquel que
+                  muestra el camino a su equipo, no el que se lo señala.
+                </p>
+              </li>
+              <li>
+                <p>Compromiso</p>
+                <p>
+                  Ahondando en mi experiencia, siempre he demostrado un total
+                  compromiso con el puesto que ostentaba. Mi implicación es
+                  máxima.
+                </p>
+              </li>
+              <li>
+                <p>Eficiencia</p>
+                <p>
+                  Siempre he destacado por identificar rápidamente potenciales
+                  problemas y ser capaz de prevenirlos con anticipación.
+                </p>
+              </li>
+              <li>
+                <p>Empatía</p>
+                <p>
+                  Si bien cabe soy una persona exigente, conmigo mismo
+                  sobretodo. Aquello que hago, me gusta hacerlo siempre de la
+                  mejor manera. De la misma manera entiendo perfectamente que
+                  todos somos personas y podemos tener momentos más bajos.
+                </p>
+              </li>
+              <li>
+                <p>Autoaprendizaje</p>
+                <p>
+                  Mi experiencia en ITAcademy, realizando primero el curso de
+                  Fundamentos de la Programación y posteriormente el Bootcamp
+                  de NodeJS, que son al estilo <i>"up to you"</i> me ha dotado
+                  de una capacidad de autoaprendizaje gracias a la cual soy
+                  capaz de conocer tecnologias e incorporarlas a mi Tech-Stack
+                  en poco tiempo y con buena capacidad para aplicarlas.
+                </p>
+              </li>
             </ul>
-        </section>
-
-        <section id="proyectos">
-            <h2>Proyectos</h2>
-            <p>En construcción...</p>
-        </section>
-
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>¡No dudes en contactarme para cualquier proyecto o consulta!</p>
+          </span>
+          <span data-lang="en">
             <ul>
-                <li>Correo electrónico: <a href="mailto:martinherranzc@gmail.com">martinherranzc@gmail.com</a></li>
-                <li>GitHub: <a href="https://github.com/ClaudioMartinH">https://github.com/ClaudioMartinH</a></li>
-                </ul>
-        </section>
-    </main>
+              <li>
+                <p>Leadership and Teamwork</p>
+                <p>
+                  In my extensive experience as a team leader in the
+                  hospitality industry, I have perfected the art of guiding
+                  and supporting colleagues to achieve a common goal. I have
+                  always believed that a <b>leader</b> should be one who shows
+                  the way to their team, not one who merely points it out.
+                </p>
+              </li>
+              <li>
+                <p>Commitment</p>
+                <p>
+                  Throughout my experience, I have always demonstrated total
+                  commitment to the position I held. My involvement is always
+                  at its maximum.
+                </p>
+              </li>
+              <li>
+                <p>Efficiency</p>
+                <p>
+                  I have always stood out for quickly identifying potential
+                  problems and being able to prevent them in advance.
+                </p>
+              </li>
+              <li>
+                <p>Empathy</p>
+                <p>
+                  While I am a demanding person, especially with myself, and I
+                  like to do everything to the best of my ability, I also
+                  perfectly understand that we are all human and can have our
+                  low moments.
+                </p>
+              </li>
+              <li>
+                <p>Self-learning</p>
+                <p>
+                  My experience at ITAcademy, first completing the
+                  Fundamentals of Programming course and then the NodeJS
+                  Bootcamp, which are in the "up to you" style, has given me a
+                  self-learning capacity. Thanks to this, I am able to learn
+                  new technologies and incorporate them into my Tech-Stack in
+                  a short time with a good ability to apply them.
+                </p>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Claudio Martin H</p>
-    </footer>
+    <section id="courses">
+      <h2>
+        <span data-lang="es">Cursos y Certificaciones</span>
+        <span data-lang="en">Courses and Certifications</span>
+      </h2>
+      <ul class="certificate-list">
+        <li>
+          <a href="./nodejs-certificate-bootcamp.png" class="certificate-link">
+            <img src="./nodejs-certificate-bootcamp.png" alt="Node.js Bootcamp Certificate" class="certificate-thumb" />
+            <span data-lang="es">Bootcamp de Node.js de ITAcademy Barcelona Activa</span>
+            <span data-lang="en">Node.js Bootcamp from ITAcademy Barcelona Activa</span>
+          </a>
+        </li>
+        <li>
+          <a href="./certificat-golang.png" class="certificate-link">
+            <img src="./certificat-golang.png" alt="GoLang Certificate" class="certificate-thumb" />
+            <span data-lang="es">Introducción a GoLang</span>
+            <span data-lang="en">GoLang First Approach</span>
+          </a>
+        </li>
+        <li>
+          <a href="./certificat-java.png" class="certificate-link">
+            <img src="./certificat-java.png" alt="Java Certificate" class="certificate-thumb" />
+            <span data-lang="es">Introducción a Java</span>
+            <span data-lang="en">Java First Approach</span>
+          </a>
+        </li>
+        <li>
+          <a href="./nasa-space-apps.png" class="certificate-link">
+            <img src="./nasa-space-apps.png" alt="NASA SpaceApps Challenge Certificate" class="certificate-thumb" />
+            <span data-lang="es">NASA SpaceApps Challenge 2024 Hackathon</span>
+            <span data-lang="en">NASA SpaceApps Challenge 2024 Hackathon</span>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="proyectos">
+      <h2>
+        <span data-lang="es">Proyectos Destacados</span>
+        <span data-lang="en">Featured Projects</span>
+      </h2>
+
+      <div class="proyecto">
+        <h3 class="proyecto-titulo">
+          <a href="https://github.com/ClaudioMartinH/7.1-claudimartin-chat-app.git" target="_blank" rel="noopener noreferrer"  style="color: black; text-decoration: none;">
+            <i class="fab fa-github" style="color: black;"></i>
+            <span data-lang="es" style="color: black; text-decoration: none;">ChatApp ITAcademy - Chat en Tiempo Real</span>
+            <span data-lang="en" style="color: black; text-decoration: none;">ChatApp ITAcademy - Real Time Chat</span>
+          </a>
+        </h3>
+        <p class="proyecto-descripcion-breve">
+          <span data-lang="es">Aplicación de chat en tiempo real con Node.js, Express, MongoDB y
+            Socket.IO</span>
+          <span data-lang="en">Real-time chat application with Node.js, Express, MongoDB, and
+            Socket.IO</span>
+        </p>
+        <div class="proyecto-detalles">
+          <p>
+            <span data-lang="es">
+              Características principales:
+              <ul>
+                <li>Mensajería en tiempo real con Socket.IO</li>
+                <li>Autenticación segura con JWT y Google OAuth</li>
+                <li>Persistencia de datos con MongoDB</li>
+                <li>Interfaz de usuario con Bootstrap</li>
+                <li>Buscador de usuarios y salas de chat</li>
+                <li>Salas de chat públicas y privadas</li>
+                <li>
+                  Implementación de debounce y throttle para optimización
+                </li>
+                <li>Carga de fotos de perfil con Multer</li>
+              </ul>
+            </span>
+            <span data-lang="en">
+              Key features:
+              <ul>
+                <li>Real-time messaging with Socket.IO</li>
+                <li>Secure authentication with JWT and Google OAuth</li>
+                <li>Data persistence with MongoDB</li>
+                <li>User interface with Bootstrap</li>
+                <li>User and chat room search functionality</li>
+                <li>Public and private chat rooms</li>
+                <li>
+                  Implementation of debounce and throttle for optimization
+                </li>
+                <li>Profile picture upload with Multer</li>
+              </ul>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="proyecto">
+        <h3 class="proyecto-titulo">
+          <a href="https://github.com/ClaudioMartinH/prova_hackato_SO_appActivitats.git" target="_blank" rel="noopener noreferrer"  style="color: black; text-decoration: none;">
+            <i class="fab fa-github" style="color: black;"></i>
+            <span data-lang="es" style="color: black; text-decoration: none;">AppActivitats - Gestión de Actividades</span>
+            <span data-lang="en" style="color: black; text-decoration: none;">AppActivitats - Activity Management</span>
+          </a>
+        </h3>
+        <p class="proyecto-descripcion-breve">
+          <span data-lang="es">App de gestión de actividades con Node.js, Express y MongoDB</span>
+          <span data-lang="en">Activity management app with Node.js, Express, and MongoDB</span>
+        </p>
+        <div class="proyecto-detalles">
+          <span data-lang="es">
+            <p>Características principales:</p>
+            <ul>
+              <li>Backend desarrollado con Node.js y Express</li>
+              <li>Base de datos MongoDB</li>
+              <li>Registro y autenticación de usuarios</li>
+              <li>Creación, edición y eliminación de actividades</li>
+              <li>Inscripción y cancelación de participación en actividades</li>
+              <li>Exportación e importación de actividades en formato JSON</li>
+              <li>Implementación de middleware para seguridad (CORS, Helmet)</li>
+              <li>Gestión de errores centralizada</li>
+            </ul>
+            <p>Endpoints destacados:</p>
+            <ul>
+              <li>Gestión completa de usuarios (CRUD)</li>
+              <li>Gestión completa de actividades</li>
+              <li>Búsqueda de usuarios por nombre</li>
+              <li>Unirse y abandonar actividades</li>
+              <li>Descarga y carga de actividades en formato JSON</li>
+            </ul>
+          </span>
+          <span data-lang="en">
+            <p>Main features:</p>
+            <ul>
+              <li>Backend developed with Node.js and Express</li>
+              <li>MongoDB database</li>
+              <li>User registration and authentication</li>
+              <li>Creation, editing, and deletion of activities</li>
+              <li>Registration and cancellation of participation in activities</li>
+              <li>Export and import of activities in JSON format</li>
+              <li>Implementation of middleware for security (CORS, Helmet)</li>
+              <li>Centralized error handling</li>
+            </ul>
+            <p>Featured endpoints:</p>
+            <ul>
+              <li>Complete user management (CRUD)</li>
+              <li>Complete activity management</li>
+              <li>User search by name</li>
+              <li>Join and leave activities</li>
+              <li>Download and upload activities in JSON format</li>
+            </ul>
+          </span>
+        </div>
+      </div>
+      <section id="contacto">
+        <h2>
+          <span data-lang="es">Contacto</span>
+          <span data-lang="en">Contact</span>
+        </h2>
+        <p>
+          <a href="mailto:martinherranzc@gmail.com"><i class="fas fa-envelope"></i> martinherranzc@gmail.com</a>
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/in/claudio-martin-herranz"><i class="fab fa-linkedin"></i> Claudio Martín
+            Herranz</a>
+        </p>
+        <p>
+          <a href="https://github.com/ClaudioMartinH"><i class="fab fa-github"></i> ClaudioMartinH</a>
+        </p>
+        <a href="cv-claudimartin.pdf" download="mi-cv.pdf"><i class="fas fa-file-download"></i> Curriculum Vitae</a>
+      </section>
+  </main>
+
+  <footer>
+    <p>
+      <span data-lang="es">&copy; 2024 Claudio Martin Herranz. Todos los derechos reservados.</span>
+      <span data-lang="en">&copy; 2024 2024 Claudio Martin Herranz. All rights reserved.</span>
+    </p>
+  </footer>
+
+  <script>
+    function changeLanguage(lang) {
+      const links = document.querySelectorAll("header nav ul li a");
+      links.forEach((link) => {
+        const title = link.getAttribute(`data-title-${lang}`);
+        link.setAttribute("title", title);
+      });
+      const elements = document.querySelectorAll("[data-lang]");
+      elements.forEach((element) => {
+        if (element.getAttribute("data-lang") === lang) {
+          element.style.display = "";
+        } else {
+          element.style.display = "none";
+        }
+      });
+      document.documentElement.lang = lang;
+      const languageSelector = document.getElementById("languageSelector");
+      languageSelector.value = lang;
+      document.body.offsetHeight;
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      const languageSelector = document.getElementById("languageSelector");
+      languageSelector.addEventListener("change", (event) => {
+        changeLanguage(event.target.value);
+      });
+      changeLanguage("es");
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.getElementById("toggleSkills");
+      const skillsContent = document.querySelector(".skills-content");
+
+      toggleButton.addEventListener("click", function () {
+        skillsContent.classList.toggle("expanded");
+        if (skillsContent.classList.contains("expanded")) {
+          toggleButton.querySelector('[data-lang="es"]').textContent =
+            "Mostrar menos";
+          toggleButton.querySelector('[data-lang="en"]').textContent =
+            "Show less";
+        } else {
+          toggleButton.querySelector('[data-lang="es"]').textContent =
+            "Mostrar más";
+          toggleButton.querySelector('[data-lang="en"]').textContent =
+            "Show more";
+        }
+      });
+    });
+    let hue = 0;
+    function changeBorderColor() {
+      const paragraphs = document.querySelectorAll(".dynamic-border");
+      hue = (hue + 1) % 360;
+      const color = `hsl(${hue}, 100%, 50%)`;
+
+      paragraphs.forEach((paragraph) => {
+        paragraph.style.borderColor = color;
+      });
+    }
+    setInterval(changeBorderColor, 50);
+
+    // Smooth scrolling
+    const links = document.querySelectorAll("a[href^='#']");
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        const startPosition = window.pageYOffset;
+        const targetPosition = targetElement.offsetTop;
+        const distance = targetPosition - startPosition;
+        const duration = 750;
+        let start = null;
+        function animate(currentTime) {
+          if (!start) start = currentTime;
+          const progress = currentTime - start;
+          if (progress > duration) return;
+          window.scrollTo(
+            0,
+            startPosition + distance * (progress / duration)
+          );
+          requestAnimationFrame(animate);
+
+          // Change language on scroll
+          const scrollTop = window.pageYOffset;
+          const languageElements = document.querySelectorAll("[data-lang]");
+          if (scrollTop > 500) {
+            languageElements.forEach((element) => {
+              element.style.display = "inline";
+            });
+          } else {
+            languageElements.forEach((element) => {
+              element.style.display = "none";
+            });
+          }
+        }
+        requestAnimationFrame(animate);
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.style.zoom = "70%";
+    });
+  </script>
 </body>
-</html> -->
+
+</html>
