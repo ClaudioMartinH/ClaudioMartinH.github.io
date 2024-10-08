@@ -6,16 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Portafolio IT | My IT Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    /> -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    /> -->
   <link
     href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet" />
@@ -63,55 +55,20 @@
       </select>
     </nav>
   </header>
-  <!-- <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="#inicio" data-lang="es">Inicio</a
-            ><a href="#inicio" data-lang="en">Home</a>
-          </li>
-          <li>
-            <a href="#sobre-mi" data-lang="es">Sobre Mí</a
-            ><a href="#sobre-mi" data-lang="en">About Me</a>
-          </li>
-          <li>
-            <a href="#habilidades" data-lang="es">Habilidades</a
-            ><a href="#habilidades" data-lang="en">Skills</a>
-          </li>
-          <li>
-            <a href="#courses" data-lang="es">Formación</a
-            ><a href="#courses" data-lang="en">Courses</a>
-          </li>
-          <li>
-            <a href="#proyectos" data-lang="es">Proyectos</a
-            ><a href="#proyectos" data-lang="en">Projects</a>
-          </li>
-          <li>
-            <a href="#contacto" data-lang="es">Contacto</a
-            ><a href="#contacto" data-lang="en">Contact</a>
-          </li>
-        </ul>
-        <select id="languageSelector">
-          <option value="es">Español</option>
-          <option value="en">English</option>
-        </select>
-      </nav>
-    </header> -->
-
   <main>
- <section id="inicio">
-  <h1>
-    <span data-lang="es">Bienvenido a mi Portafolio IT</span>
-    <span data-lang="en">Welcome to my IT Portfolio</span>
-  </h1>
-  <div class="personal-info">
-    <h2>Claudio Martín Herranz</h2>
-    <p class="job-title">
-      <span data-lang="es">Desarrollador de Software</span>
-      <span data-lang="en">Software Developer</span>
-    </p>
-  </div>
-</section>
+    <section id="inicio">
+      <h1>
+        <span data-lang="es">Bienvenido a mi Portafolio IT</span>
+        <span data-lang="en">Welcome to my IT Portfolio</span>
+      </h1>
+      <div class="personal-info">
+        <h2>Claudio Martín Herranz</h2>
+        <p class="job-title">
+          <span data-lang="es">Desarrollador de Software</span>
+          <span data-lang="en">Software Developer</span>
+        </p>
+      </div>
+    </section>
 
     <section id="sobre-mi">
       <h2>
@@ -321,9 +278,11 @@
 
       <div class="proyecto">
         <h3 class="proyecto-titulo">
-          <a href="https://github.com/ClaudioMartinH/7.1-claudimartin-chat-app.git" target="_blank" rel="noopener noreferrer"  style="color: black; text-decoration: none;">
+          <a href="https://github.com/ClaudioMartinH/7.1-claudimartin-chat-app.git" target="_blank"
+            rel="noopener noreferrer" style="color: black; text-decoration: none;">
             <i class="fab fa-github" style="color: black;"></i>
-            <span data-lang="es" style="color: black; text-decoration: none;">ChatApp ITAcademy - Chat en Tiempo Real</span>
+            <span data-lang="es" style="color: black; text-decoration: none;">ChatApp ITAcademy - Chat en Tiempo
+              Real</span>
             <span data-lang="en" style="color: black; text-decoration: none;">ChatApp ITAcademy - Real Time Chat</span>
           </a>
         </h3>
@@ -370,9 +329,11 @@
       </div>
       <div class="proyecto">
         <h3 class="proyecto-titulo">
-          <a href="https://github.com/ClaudioMartinH/prova_hackato_SO_appActivitats.git" target="_blank" rel="noopener noreferrer"  style="color: black; text-decoration: none;">
+          <a href="https://github.com/ClaudioMartinH/prova_hackato_SO_appActivitats.git" target="_blank"
+            rel="noopener noreferrer" style="color: black; text-decoration: none;">
             <i class="fab fa-github" style="color: black;"></i>
-            <span data-lang="es" style="color: black; text-decoration: none;">AppActivitats - Gestión de Actividades</span>
+            <span data-lang="es" style="color: black; text-decoration: none;">AppActivitats - Gestión de
+              Actividades</span>
             <span data-lang="en" style="color: black; text-decoration: none;">AppActivitats - Activity Management</span>
           </a>
         </h3>
@@ -440,7 +401,8 @@
         <p>
           <a href="https://github.com/ClaudioMartinH"><i class="fab fa-github"></i> ClaudioMartinH</a>
         </p>
-        <a href="cv-claudimartin.pdf" download="mi-cv.pdf"><i class="fas fa-file-download"></i> Curriculum Vitae</a>
+        <a id="cv-download" href="cv-claudimartin-esp.pdf" download><i class="fas fa-file-download"></i> <span
+            data-lang="es">Curriculum Vitae</span><span data-lang="en">Resume</span></a>
       </section>
   </main>
 
@@ -452,6 +414,16 @@
   </footer>
 
   <script>
+    function updateCVDownload(lang) {
+      const cvLink = document.getElementById('cv-download');
+      if (lang === 'es') {
+        cvLink.href = 'cv-claudimartin-esp.pdf';
+        cvLink.download = 'cv-claudimartin-esp.pdf';
+      } else {
+        cvLink.href = 'cv-claudimartin-eng.pdf';
+        cvLink.download = 'cv-claudimartin-eng.pdf';
+      }
+    }
     function changeLanguage(lang) {
       const links = document.querySelectorAll("header nav ul li a");
       links.forEach((link) => {
@@ -477,6 +449,7 @@
         changeLanguage(event.target.value);
       });
       changeLanguage("es");
+      updateCVDownload(initialLang);
     });
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -510,7 +483,6 @@
     }
     setInterval(changeBorderColor, 50);
 
-    // Smooth scrolling
     const links = document.querySelectorAll("a[href^='#']");
     links.forEach((link) => {
       link.addEventListener("click", function (e) {
