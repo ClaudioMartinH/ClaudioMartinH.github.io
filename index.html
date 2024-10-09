@@ -536,28 +536,28 @@
     </p>
   </footer>
   <script>
-    
-      function updateCVDownload(lang) {
-  const cvLink = document.getElementById("cv-download");
-  if (cvLink) {
-    let fileName;
-    switch(lang) {
-      case "es":
-        fileName = "cv-claudimartin-esp.pdf";
-        break;
-      case "ca":
-        fileName = "cv-claudimartin-esp.pdf";
-        break;
-      case "en":
-        fileName = "cv-claudimartin-eng.pdf";
-        break;
-      default:
-        fileName = "cv-claudimartin-esp.pdf";
+
+    function updateCVDownload(lang) {
+      const cvLink = document.getElementById("cv-download");
+      if (cvLink) {
+        let fileName;
+        switch (lang) {
+          case "es":
+            fileName = "cv-claudimartin-esp.pdf";
+            break;
+          case "ca":
+            fileName = "cv-claudimartin-esp.pdf";
+            break;
+          case "en":
+            fileName = "cv-claudimartin-eng.pdf";
+            break;
+          default:
+            fileName = "cv-claudimartin-esp.pdf";
+        }
+        cvLink.href = fileName;
+        cvLink.download = fileName;
+      }
     }
-    cvLink.href = fileName;
-    cvLink.download = fileName;
-  }
-}
 
     function changeLanguage(lang) {
       const links = document.querySelectorAll("header nav ul li a");
@@ -588,19 +588,20 @@
       const languageSelector = document.getElementById('languageSelector');
       const selectedOption = languageSelector.options[languageSelector.selectedIndex];
       const flag = selectedOption.getAttribute('data-flag');
-      languageSelector.style.backgroundImage = `url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'), none`;
-      languageSelector.style.backgroundPosition = `right 10px center, left 10px center`;
-      languageSelector.style.backgroundSize = `12px, 16px`;
-      languageSelector.style.backgroundRepeat = `no-repeat, no-repeat`;
-      languageSelector.style.paddingLeft = '30px';
       languageSelector.style.setProperty('--flag', `"${flag}"`);
+      languageSelector.style.backgroundImage = `url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>')`;
+      languageSelector.style.backgroundPosition = 'right 10px center';
+      languageSelector.style.backgroundSize = '12px';
+      languageSelector.style.backgroundRepeat = 'no-repeat';
+      languageSelector.style.paddingLeft = '30px';
+      languageSelector.style.paddingRight = '30px';
     }
     document.addEventListener("DOMContentLoaded", () => {
       const languageSelector = document.getElementById("languageSelector");
       if (languageSelector) {
         languageSelector.addEventListener("change", (event) => {
           changeLanguage(event.target.value);
-          updateSelectedFlag(); // Actualiza la bandera cuando cambia el idioma
+          updateSelectedFlag();
         });
       }
       changeLanguage("es");
