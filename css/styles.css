@@ -1,12 +1,23 @@
-/* General Styles */
 body {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Ubuntu", italic;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  background-image: url("../img/20221109_180529.jpg");
+  background-size: cover;
+  background-attachment: scroll;
   color: #fff;
 }
 
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.4rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
 p {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -24,96 +35,51 @@ video {
   z-index: -1;
   object-fit: cover;
 }
-
-/* Header & Navbar */
-header {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 0.4rem 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(5px);
+#languageSelector {
+  padding-left: 30px;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px;
 }
 
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+#languageSelector::before {
+  content: var(--flag);
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-header nav ul {
-  display: flex;
+nav ul {
   list-style-type: none;
   padding: 0;
-  justify-content: flex-end;
+  text-align: center;
 }
 
-header nav ul li {
+nav ul li {
+  display: inline;
   margin: 0 10px;
 }
 
-header nav ul li a {
-  color: #ffffffc0;
-  font-size: 24px;
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-  color: #00ffcc;
-}
-.hidden-text {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-/* Language Selector */
-#languageSelector {
-  appearance: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid #00ffcc;
-  border-radius: 20px;
-  color: #ffffff00;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 14px;
-  padding: 8px 30px 8px 15px;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#languageSelector:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
-}
-
-#languageSelector:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 255, 204, 0.5);
-}
-
-#languageSelector::after {
-  content: "\25BC";
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
-  pointer-events: none;
+nav ul li a:hover {
   color: #00ffcc;
 }
 
-/* Main Section */
 main {
-  padding: 20px;
+  padding: 20px 20px 20px;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* Section Styles */
 section {
   background-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 20px;
@@ -129,18 +95,19 @@ section:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
-/* Text Styles */
 h1,
 h2 {
   color: #072a23;
 }
-
 h1 {
   margin-top: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 .personal-info {
   color: #135b75;
 }
@@ -151,23 +118,20 @@ h1 {
 
 .job-title {
   font-size: 1.2em;
+  font-weight: bold;
 }
-
-/* Dynamic Border */
 .dynamic-border {
   padding: 10px;
   border: 2px solid;
   border-radius: 20px;
   transition: border-color 0.5s ease;
 }
-
-/* Inicio Section */
 #inicio {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  height: 50vh;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #inicio h1 {
@@ -183,7 +147,14 @@ h1 {
   background-repeat: no-repeat;
 }
 
-/* Skills Section */
+.hidden-text {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 #habilidades ul {
   list-style-type: none;
   padding: 0;
@@ -192,8 +163,7 @@ h1 {
   justify-content: center;
 }
 
-#habilidades li,
-.skills-details li {
+#habilidades li {
   background-color: rgba(0, 255, 204, 0.2);
   color: #fff;
   padding: 5px 10px;
@@ -202,43 +172,33 @@ h1 {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.skills-details li:hover {
-  background-color: rgba(0, 255, 204, 0.4);
-  transform: scale(1.05);
-}
-
 #habilidades li:hover {
   background-color: rgba(0, 255, 204, 0.4);
   transform: scale(1.05);
 }
-
-.skills-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+.skills-details ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.skills-content.expanded {
-  max-height: 1000px;
+.skills-details li {
+  background-color: rgba(0, 255, 204, 0.2);
+  color: #fff;
+  padding: 5px 10px;
+  height: fit-content; /* Este se ajustará al contenido */
+  margin: 5px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Toggle Skills Button */
-#toggleSkills {
-  display: block;
-  margin: 10px auto;
-  background-color: #00ffcc;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+.skills-details h3 {
+  margin-bottom: 10px;
+}
+.skills-details p {
+  margin-bottom: 5px;
+  margin-top: 0;
 }
 
-#toggleSkills:hover {
-  background-color: #00ccaa;
-}
-
-/* Project Section */
 .proyecto {
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 20px;
@@ -251,7 +211,119 @@ h1 {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Certificates */
+#inicio {
+  height: 50vh; /* O el valor que prefieras */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* #inicio h1 {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("./claudioSD_header.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hidden-text {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.hidden-text {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+} */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#contacto {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+/* Estilos para el selector de idioma */
+#languageSelector {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #00ffcc;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 8px 30px 8px 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#languageSelector:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+#languageSelector:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 255, 204, 0.5);
+}
+
+/* Flecha personalizada para el selector */
+#languageSelector::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #00ffcc;
+}
+
+/* Estilos para las opciones del selector */
+#languageSelector option {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Ajuste de posición del selector en el header */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header nav ul {
+  margin: 0;
+}
 .certificate-list {
   list-style-type: none;
   padding: 0;
@@ -283,87 +355,78 @@ h1 {
   transform: scale(1.1);
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
+.certificate-link span {
+  font-size: 14px;
 }
 
-/* Contacto */
-#contacto {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-}
-
-#contacto a {
-  color: black;
-  text-decoration: none;
-}
-
-#contacto a:hover {
-  text-decoration: underline;
-}
-
-/* Animations */
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Media Queries */
+/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
   header nav {
     flex-direction: column;
-    align-items: center;
+  }
+  .certificate-list {
+    display: grid;
+    flex-wrap: wrap; /* Si los elementos no caben, se colocan en la siguiente línea */
+    justify-content: space-between; /* Espacio entre los elementos */
   }
 
-  header nav ul {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  header nav ul li {
-    margin: 5px 0;
+  .certificate-list {
+    grid-template-columns: 1fr; /* 1 columna que ocupa todo el ancho */
   }
 
   #languageSelector {
     margin-top: 10px;
   }
-
-  #inicio {
-    height: auto;
-    padding-top: 60px;
-  }
-
-  #inicio h1 {
-    padding-bottom: 50%;
-    background-size: contain;
-  }
-
-  .skills-content {
-    max-height: 150px;
-  }
+}
+.skills-content {
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }
 
-@media screen and (max-width: 768px) {
-  .skills-content {
-    max-height: none;
-    height: auto;
-    overflow: visible;
-  }
+.skills-content.expanded {
+  max-height: fit-content; /* Ajusta este valor según sea necesario */
+}
 
-  .skills-content.expanded {
-    max-height: none;
-  }
+#toggleSkills {
+  background-color: #00ffcc;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#toggleSkills:hover {
+  background-color: #00ccaa;
+}
+#contacto a {
+  color: black;
+  text-decoration: none; /* Esto elimina el subrayado */
+}
+
+/* Si quieres que se subraye al pasar el mouse por encima */
+#contacto a:hover {
+  text-decoration: underline;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: flex-end; /* Ajusta la lista al final */
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: #ffffffc0; /* O el color que prefieras */
+  font-size: 24px; /* Ajusta el tamaño según necesites */
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #00ffcc; /* O el color que prefieras para el hover */
 }
