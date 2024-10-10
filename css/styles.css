@@ -3,10 +3,6 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-image: url("../img/20221109_180529.jpg");
-  background-image: url("../img/20221109_180529.jpg");
-  background-size: cover;
-  background-attachment: scroll;
   color: #fff;
 }
 video {
@@ -17,10 +13,9 @@ video {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -1000;
+  z-index: -1;
   object-fit: cover;
 }
-
 header {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 0.4rem 0;
