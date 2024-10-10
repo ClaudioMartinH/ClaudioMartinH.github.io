@@ -8,7 +8,7 @@ body {
   background-attachment: scroll;
   color: #fff;
 }
-video {
+/* video {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -18,7 +18,7 @@ video {
   height: auto;
   z-index: -1000;
   object-fit: cover;
-}
+} */
 
 header {
   background-color: rgba(0, 0, 0, 0.7);
