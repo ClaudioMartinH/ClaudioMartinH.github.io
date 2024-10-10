@@ -7,7 +7,6 @@ body {
   background-image: url("../img/20221109_180529.jpg");
   background-size: cover;
   background-attachment: scroll;
-  background-position: fixed;
   color: #fff;
 }
 video {
