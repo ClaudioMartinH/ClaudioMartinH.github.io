@@ -64,6 +64,13 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #00ffcc;
 }
+.hidden-text {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 /* Language Selector */
 #languageSelector {
@@ -197,8 +204,12 @@ h1 {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#habilidades li:hover,
 .skills-details li:hover {
+  background-color: rgba(0, 255, 204, 0.4);
+  transform: scale(1.05);
+}
+
+#habilidades li:hover {
   background-color: rgba(0, 255, 204, 0.4);
   transform: scale(1.05);
 }
