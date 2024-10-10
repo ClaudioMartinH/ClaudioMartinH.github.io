@@ -682,12 +682,10 @@
 
         const elements = document.querySelectorAll("[data-lang]");
         elements.forEach((element) => {
-          if (element.getAttribute("data-lang") === lang) {
-            element.style.display = "";
-          } else {
-            element.style.display = "none";
-          }
+          element.style.display =
+            element.getAttribute("data-lang") === lang ? "" : "none";
         });
+
         document.documentElement.lang = lang;
         const languageSelector = document.getElementById("languageSelector");
         if (languageSelector) {
@@ -710,6 +708,7 @@
         languageSelector.style.paddingLeft = "30px";
         languageSelector.style.paddingRight = "30px";
       }
+
       document.addEventListener("DOMContentLoaded", () => {
         const languageSelector = document.getElementById("languageSelector");
         if (languageSelector) {
@@ -718,6 +717,7 @@
             updateSelectedFlag();
           });
         }
+
         changeLanguage("es");
         updateSelectedFlag();
 
@@ -759,6 +759,7 @@
               const distance = targetPosition - startPosition;
               const duration = 750;
               let start = null;
+
               function animate(currentTime) {
                 if (!start) start = currentTime;
                 const progress = currentTime - start;
@@ -769,6 +770,7 @@
                 );
                 requestAnimationFrame(animate);
               }
+
               requestAnimationFrame(animate);
             }
           });

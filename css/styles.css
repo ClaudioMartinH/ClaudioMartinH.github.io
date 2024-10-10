@@ -318,6 +318,15 @@ header nav ul {
 .certificate-link span {
   font-size: 14px;
 }
+.skills-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.skills-content.expanded {
+  max-height: 1000px; /* Ajusta este valor según el contenido */
+}
 
 @media (max-width: 768px) {
   header nav {
