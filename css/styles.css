@@ -3,10 +3,21 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-image: url("../img/20221109_180529.jpg");
+  /* background-image: url("../img/20221109_180529.jpg");
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: scroll; */
   color: #fff;
+}
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  object-fit: cover;
 }
 
 header {
