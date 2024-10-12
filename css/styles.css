@@ -369,9 +369,6 @@ header nav ul {
     flex-wrap: wrap; /* Si los elementos no caben, se colocan en la siguiente línea */
     justify-content: space-between; /* Espacio entre los elementos */
   }
-#inicio h1 {
-    padding-bottom: 0;
-}
 
   .certificate-list {
     grid-template-columns: 1fr; /* 1 columna que ocupa todo el ancho */
