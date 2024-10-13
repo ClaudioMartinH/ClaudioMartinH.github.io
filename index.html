@@ -87,7 +87,7 @@
           </li>
         </ul>
         <select id="languageSelector">
-          <option value="es" data-flag="🇪🇸">Español</option>
+          <option value="es" data-flag="🇪🇸">Castellano</option>
           <option value="ca" data-flag="ca">Català</option>
           <option value="en" data-flag="🇬🇧">English</option>
         </select>
@@ -139,15 +139,16 @@
           <span data-lang="ca">Habilitats Tècniques</span>
           <span data-lang="en">My Tech Stack</span>
         </h2>
-        <ul>
+        <ul id="skills-list">
           <li>Node.js</li>
           <li>Express</li>
           <li>Typescript</li>
           <li>JavaScript</li>
           <li>MongoDB</li>
           <li>SQL</li>
-          <li>React</li>
           <li>Socket.io</li>
+          <li>Docker</li>
+          <li>React</li>
           <li>HTML</li>
           <li>CSS</li>
           <li>Git</li>
@@ -651,6 +652,46 @@
       </p>
     </footer>
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const skills = document.querySelectorAll("#skills-list li");
+        let delay = 200;
+        let cycleDelay = 200;
+        let totalDelay = 0;
+        let visibleTime = 2000;
+
+        function showSkills() {
+          skills.forEach((skill, index) => {
+            setTimeout(() => {
+              skill.classList.add("show");
+            }, totalDelay);
+            totalDelay += delay;
+          });
+
+          setTimeout(() => {
+            hideSkills();
+          }, totalDelay + visibleTime);
+        }
+
+        function hideSkills() {
+          totalDelay = 0;
+
+          skills.forEach((skill, index) => {
+            setTimeout(() => {
+              skill.classList.remove("show");
+              skill.classList.add("hide");
+            }, totalDelay);
+            totalDelay += delay;
+          });
+
+          setTimeout(() => {
+            skills.forEach((skill) => skill.classList.remove("hide"));
+            showSkills();
+          }, totalDelay + cycleDelay);
+        }
+
+        showSkills();
+      });
+
       function updateCVDownload(lang) {
         const cvLink = document.getElementById("cv-download");
         if (cvLink) {
@@ -776,7 +817,7 @@
           });
         });
 
-        document.body.style.zoom = "70%";
+        document.body.style.zoom = "80%";
       });
     </script>
   </body>

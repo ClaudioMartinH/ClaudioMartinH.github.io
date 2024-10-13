@@ -169,9 +169,19 @@ h1 {
   padding: 5px 10px;
   margin: 5px;
   border-radius: 20px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px); /* Aparece desde abajo */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
+#skills-list li.show {
+  opacity: 1;
+  transform: translateY(0); /* Termina en posición normal */
+}
+#skills-list li.hide {
+  opacity: 0;
+  transform: translateY(-20px); /* Desaparece hacia arriba */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
 #habilidades li:hover {
   background-color: rgba(0, 255, 204, 0.4);
   transform: scale(1.05);
