@@ -246,9 +246,9 @@ footer {
 }
 
 #contacto {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #0a4234);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 7s ease infinite;
 }
 #languageSelector {
   appearance: none;
@@ -358,6 +358,81 @@ header nav ul {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 }
+@media (max-width: 480px) {
+  header nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  #toggleSkills {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #0a4234);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+    border: #5b6e6b;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  #sobre-mi {
+    min-height: 60px;
+  }
+  #sobre-mi h2 {
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+  #skills-content.collapsed {
+    margin-top: 2px;
+    min-height: 30vh;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  #languageSelector {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  section {
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  #inicio {
+    height: 40vh;
+    padding-bottom: 0;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .certificate-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certificate-link {
+    width: 100%;
+  }
+
+  .certificate-thumb {
+    width: 80px;
+    height: 80px;
+  }
+  .skills-content {
+    height: auto;
+    /* overflow: hidden; */
+    transition: max-height 0.3s ease-out;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
 .skills-content {
   max-height: 100px;
   overflow: hidden;
