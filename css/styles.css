@@ -10,7 +10,9 @@ body {
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(-45deg, #25282a97, #9eb9b28f);
+  background-size: 400% 400%;
+  animation: gradient 4s ease infinite;
   padding: 0.4rem 0;
   position: fixed;
   width: 100%;
@@ -318,15 +320,36 @@ header nav {
 header nav ul {
   margin: 0;
 }
-.certificate-list {
-  list-style-type: none;
-  padding: 0;
+.certificate-pyramid {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.row-1 {
+  width: 100%;
+}
+
+.row-2 {
+  width: 80%;
+}
+
+.row-3 {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
 .certificate-link {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
