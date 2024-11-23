@@ -98,9 +98,11 @@ p {
   margin-bottom: 20px;
 }
 
-h1,
 h2 {
-  color: #31cdae;
+  font-size: 30px;
+  color: #00ffcc;
+  -webkit-text-stroke: 0.5px black;
+  text-align: center;
 }
 h1 {
   margin-top: 0;
@@ -164,6 +166,7 @@ h1 {
 #habilidades li {
   background-color: rgba(0, 255, 204, 0.2);
   color: #fff;
+  align-items: center;
   padding: 5px 10px;
   margin: 5px;
   border-radius: 20px;
@@ -190,7 +193,16 @@ h1 {
 }
 
 .skills-details li {
-  background-color: rgba(0, 255, 204, 0.2);
+  background: linear-gradient(
+    -45deg,
+    #095212a6,
+    #3a7b15a1,
+    #208db49d,
+    #0a4234a0
+  );
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  text-align: center;
   color: #fff;
   padding: 5px 10px;
   height: fit-content;
@@ -246,7 +258,13 @@ footer {
 }
 
 #contacto {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #0a4234);
+  background: linear-gradient(
+    -45deg,
+    #ee76529b,
+    #e73c7e8c,
+    #23a5d597,
+    #0a42348f
+  );
   background-size: 400% 400%;
   animation: gradient 7s ease infinite;
 }
@@ -287,7 +305,7 @@ footer {
 }
 
 #languageSelector option {
-  background-color: #333;
+  background-color: #4f4f4f;
   color: #fff;
 }
 header nav {
@@ -359,6 +377,17 @@ header nav ul {
   }
 }
 @media (max-width: 480px) {
+  body {
+    background-image: url("../img/pexels-sinden-sunna-563011-3029916.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  h2 {
+    font-size: 20px;
+    color: #00ffcc;
+    -webkit-text-stroke: 0.5px black;
+    text-align: center;
+  }
   header nav {
     flex-direction: column;
     text-align: center;
@@ -385,6 +414,11 @@ header nav ul {
     margin-top: 2px;
     min-height: 30vh;
   }
+  .certificate-list {
+    display: grid;
+    /* flex-wrap: wrap; */
+    grid-template-columns: 2fr 2fr;
+  }
 
   header nav ul li {
     margin: 10px 0;
@@ -409,10 +443,10 @@ header nav ul {
     align-items: center;
   }
 
-  .certificate-list {
+  /* .certificate-list {
     flex-direction: column;
     align-items: center;
-  }
+  } */
 
   .certificate-link {
     width: 100%;
@@ -424,7 +458,6 @@ header nav ul {
   }
   .skills-content {
     height: auto;
-    /* overflow: hidden; */
     transition: max-height 0.3s ease-out;
   }
 
@@ -444,7 +477,9 @@ header nav ul {
 }
 
 #toggleSkills {
-  background-color: #00ffcc;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #0a4234);
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
   border: none;
   padding: 10px 20px;
   margin-top: 10px;
