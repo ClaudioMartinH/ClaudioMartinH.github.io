@@ -55,10 +55,10 @@
         </li>
       </ul>
       <select id="languageSelector">
-        <option value="es" data-flag="🇪🇸">Castellano</option>
-        <option value="ca" data-flag="ca">Català</option>
-        <option value="en" data-flag="🇬🇧">English</option>
-      </select>
+      <option value="es" data-flag="img/spain.png">Castellano</option>
+      <option value="ca" data-flag="img/catalan.png">Català</option>
+      <option value="en" data-flag="img/england.png">English</option>
+    </select>
     </nav>
   </header>
   <main>
@@ -681,174 +681,184 @@
     </p>
   </footer>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const skills = document.querySelectorAll("#skills-list li");
-      let delay = 200;
-      let cycleDelay = 200;
-      let totalDelay = 0;
-      let visibleTime = 2000;
+  document.addEventListener("DOMContentLoaded", function () {
+    // Animación de habilidades
+    const skills = document.querySelectorAll("#skills-list li");
+    let delay = 200;
+    let cycleDelay = 200;
+    let totalDelay = 0;
+    let visibleTime = 2000;
 
-      function showSkills() {
-        skills.forEach((skill, index) => {
-          setTimeout(() => {
-            skill.classList.add("show");
-          }, totalDelay);
-          totalDelay += delay;
-        });
-
+    function showSkills() {
+      skills.forEach((skill, index) => {
         setTimeout(() => {
-          hideSkills();
-        }, totalDelay + visibleTime);
-      }
+          skill.classList.add("show");
+        }, totalDelay);
+        totalDelay += delay;
+      });
 
-      function hideSkills() {
-        totalDelay = 0;
+      setTimeout(() => {
+        hideSkills();
+      }, totalDelay + visibleTime);
+    }
 
-        skills.forEach((skill, index) => {
-          setTimeout(() => {
-            skill.classList.remove("show");
-            skill.classList.add("hide");
-          }, totalDelay);
-          totalDelay += delay;
-        });
+    function hideSkills() {
+      totalDelay = 0;
 
+      skills.forEach((skill, index) => {
         setTimeout(() => {
-          skills.forEach((skill) => skill.classList.remove("hide"));
-          showSkills();
-        }, totalDelay + cycleDelay);
-      }
+          skill.classList.remove("show");
+          skill.classList.add("hide");
+        }, totalDelay);
+        totalDelay += delay;
+      });
 
-      showSkills();
+      setTimeout(() => {
+        skills.forEach((skill) => skill.classList.remove("hide"));
+        showSkills();
+      }, totalDelay + cycleDelay);
+    }
+
+    showSkills();
+  });
+
+  // Actualización del archivo de descarga del CV
+  function updateCVDownload(lang) {
+    const cvLink = document.getElementById("cv-download");
+    if (cvLink) {
+      let fileName;
+      switch (lang) {
+        case "es":
+          fileName = "cv-claudiomartin-cas.pdf";
+          break;
+        case "ca":
+          fileName = "cv-claudiomartin-cat.pdf";
+          break;
+        case "en":
+          fileName = "cv-claudiomartin-eng.pdf";
+          break;
+        default:
+          fileName = "cv-claudiomartin-esp.pdf";
+      }
+      cvLink.href = fileName;
+      cvLink.download = fileName;
+    }
+  }
+
+  // Cambio de idioma
+  function changeLanguage(lang) {
+    const links = document.querySelectorAll("header nav ul li a");
+    links.forEach((link) => {
+      const title = link.getAttribute(`data-title-${lang}`);
+      link.setAttribute("title", title);
     });
 
-    function updateCVDownload(lang) {
-      const cvLink = document.getElementById("cv-download");
-      if (cvLink) {
-        let fileName;
-        switch (lang) {
-          case "es":
-            fileName = "cv-claudiomartin-cas.pdf";
-            break;
-          case "ca":
-            fileName = "cv-claudiomartin-cat.pdf";
-            break;
-          case "en":
-            fileName = "cv-claudiomartin-eng.pdf";
-            break;
-          default:
-            fileName = "cv-claudiomartin-esp.pdf";
-        }
-        cvLink.href = fileName;
-        cvLink.download = fileName;
-      }
+    const elements = document.querySelectorAll("[data-lang]");
+    elements.forEach((element) => {
+      element.style.display =
+        element.getAttribute("data-lang") === lang ? "" : "none";
+    });
+
+    document.documentElement.lang = lang;
+    const languageSelector = document.getElementById("languageSelector");
+    if (languageSelector) {
+      languageSelector.value = lang;
     }
 
-    function changeLanguage(lang) {
-      const links = document.querySelectorAll("header nav ul li a");
-      links.forEach((link) => {
-        const title = link.getAttribute(`data-title-${lang}`);
-        link.setAttribute("title", title);
+    updateCVDownload(lang);
+  }
+
+  // Actualización del icono de bandera
+  function updateSelectedFlag() {
+    const languageSelector = document.getElementById("languageSelector");
+    const selectedOption =
+      languageSelector.options[languageSelector.selectedIndex];
+    const flag = selectedOption.getAttribute("data-flag");
+
+    // Cambiar la apariencia del select para incluir la bandera
+    languageSelector.style.backgroundImage = `url('${flag}')`;
+    languageSelector.style.backgroundSize = "20px";
+    languageSelector.style.backgroundRepeat = "no-repeat";
+    languageSelector.style.backgroundPosition = "left 10px center";
+    languageSelector.style.paddingLeft = "35px"; // Espacio para la bandera
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const languageSelector = document.getElementById("languageSelector");
+    if (languageSelector) {
+      languageSelector.addEventListener("change", (event) => {
+        changeLanguage(event.target.value);
+        updateSelectedFlag();
       });
+    }
 
-      const elements = document.querySelectorAll("[data-lang]");
-      elements.forEach((element) => {
-        element.style.display =
-          element.getAttribute("data-lang") === lang ? "" : "none";
+    // Inicializar idioma y bandera
+    changeLanguage("es");
+    updateSelectedFlag();
+
+    // Expansión/contracción de habilidades
+    const toggleButton = document.getElementById("toggleSkills");
+    const skillsContent = document.querySelector(".skills-content");
+    if (toggleButton && skillsContent) {
+      toggleButton.addEventListener("click", function () {
+        skillsContent.classList.toggle("expanded");
+        const isExpanded = skillsContent.classList.contains("expanded");
+        toggleButton.querySelector('[data-lang="es"]').textContent =
+          isExpanded ? "Mostrar menos" : "Mostrar más";
+        toggleButton.querySelector('[data-lang="ca"]').textContent =
+          isExpanded ? "Mostrar menys" : "Mostrar més";
+        toggleButton.querySelector('[data-lang="en"]').textContent =
+          isExpanded ? "Show less" : "Show more";
       });
-
-      document.documentElement.lang = lang;
-      const languageSelector = document.getElementById("languageSelector");
-      if (languageSelector) {
-        languageSelector.value = lang;
-      }
-
-      updateCVDownload(lang);
     }
 
-    function updateSelectedFlag() {
-      const languageSelector = document.getElementById("languageSelector");
-      const selectedOption =
-        languageSelector.options[languageSelector.selectedIndex];
-      const flag = selectedOption.getAttribute("data-flag");
-      languageSelector.style.setProperty("--flag", `"${flag}"`);
-      languageSelector.style.backgroundImage = `url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>')`;
-      languageSelector.style.backgroundPosition = "right 10px center";
-      languageSelector.style.backgroundSize = "12px";
-      languageSelector.style.backgroundRepeat = "no-repeat";
-      languageSelector.style.paddingLeft = "30px";
-      languageSelector.style.paddingRight = "30px";
+    // Animación de borde de color
+    let hue = 0;
+    function changeBorderColor() {
+      const paragraphs = document.querySelectorAll(".dynamic-border");
+      hue = (hue + 1) % 360;
+      const color = `hsl(${hue}, 100%, 50%)`;
+      paragraphs.forEach((paragraph) => {
+        paragraph.style.borderColor = color;
+      });
     }
+    setInterval(changeBorderColor, 50);
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const languageSelector = document.getElementById("languageSelector");
-      if (languageSelector) {
-        languageSelector.addEventListener("change", (event) => {
-          changeLanguage(event.target.value);
-          updateSelectedFlag();
-        });
-      }
+    // Desplazamiento suave
+    const links = document.querySelectorAll("a[href^='#']");
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const startPosition = window.pageYOffset;
+          const targetPosition = targetElement.offsetTop;
+          const distance = targetPosition - startPosition;
+          const duration = 750;
+          let start = null;
 
-      changeLanguage("es");
-      updateSelectedFlag();
-
-      const toggleButton = document.getElementById("toggleSkills");
-      const skillsContent = document.querySelector(".skills-content");
-      if (toggleButton && skillsContent) {
-        toggleButton.addEventListener("click", function () {
-          skillsContent.classList.toggle("expanded");
-          const isExpanded = skillsContent.classList.contains("expanded");
-          toggleButton.querySelector('[data-lang="es"]').textContent =
-            isExpanded ? "Mostrar menos" : "Mostrar más";
-          toggleButton.querySelector('[data-lang="ca"]').textContent =
-            isExpanded ? "Mostrar menys" : "Mostrar més";
-          toggleButton.querySelector('[data-lang="en"]').textContent =
-            isExpanded ? "Show less" : "Show more";
-        });
-      }
-
-      let hue = 0;
-      function changeBorderColor() {
-        const paragraphs = document.querySelectorAll(".dynamic-border");
-        hue = (hue + 1) % 360;
-        const color = `hsl(${hue}, 100%, 50%)`;
-        paragraphs.forEach((paragraph) => {
-          paragraph.style.borderColor = color;
-        });
-      }
-      setInterval(changeBorderColor, 50);
-
-      const links = document.querySelectorAll("a[href^='#']");
-      links.forEach((link) => {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            const startPosition = window.pageYOffset;
-            const targetPosition = targetElement.offsetTop;
-            const distance = targetPosition - startPosition;
-            const duration = 750;
-            let start = null;
-
-            function animate(currentTime) {
-              if (!start) start = currentTime;
-              const progress = currentTime - start;
-              if (progress > duration) return;
-              window.scrollTo(
-                0,
-                startPosition + distance * (progress / duration)
-              );
-              requestAnimationFrame(animate);
-            }
-
+          function animate(currentTime) {
+            if (!start) start = currentTime;
+            const progress = currentTime - start;
+            if (progress > duration) return;
+            window.scrollTo(
+              0,
+              startPosition + distance * (progress / duration)
+            );
             requestAnimationFrame(animate);
           }
-        });
-      });
 
-      document.body.style.zoom = "80%";
+          requestAnimationFrame(animate);
+        }
+      });
     });
-  </script>
+
+    // Escala inicial
+    document.body.style.zoom = "80%";
+  });
+</script>
+
 </body>
 
 </html>
