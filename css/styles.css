@@ -459,7 +459,7 @@ li {
     border-radius: 8px;
   }
   #inicio {
-    max-height: 20vh;
+    max-height: 30vh;
     padding-bottom: 0;
     flex-direction: column;
     justify-content: end;
