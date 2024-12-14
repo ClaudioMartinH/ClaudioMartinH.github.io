@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <title>My Portfolio</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
-  <!-- Favicon -->
   <link href="img/favicon.ico" rel="icon" />
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Solway:400,700&display=swap" rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
@@ -17,30 +12,22 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
-
-  <!-- CSS Libraries -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-
-  <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
 </head>
-
 <body>
-  <!-- Header Start -->
   <div class="top-header" id="top-header">
     <div class="container text-center">
       <div class="row">
         <div class="col-md-12">
           <img src="img/20241001_183736.jpg" alt="Anamul Hasan" />
         </div>
-
         <div class="col-md-12">
           <h1>I'm Claudio Martín Herranz</h1>
         </div>
-
         <div class="col-md-12">
           <p>Web Developer, Backend Developer, Apps Developer</p>
           <h2></h2>
@@ -48,15 +35,11 @@
       </div>
     </div>
   </div>
-  <!-- Header End -->
-
-  <!-- Nav Start -->
   <div class="header">
     <div class="container">
       <div class="logo pull-left">
         <h1><a href="index.html">My Portfolio</a></h1>
       </div>
-
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="#top-header">Home</a></li>
@@ -67,13 +50,13 @@
           <li class="menu-has-children">
             <a>Language</a>
             <ul>
-              <li>
-                <a href="./js/index_cas.html" img="img/spain.png">Castellano</a>
+              <li id="cas">
+                <a  href="./js/index_cas.html" img="img/spain.png">Castellano</a>
               </li>
-              <li>
+              <li  id="cat">
                 <a href="./js/index_cat.html" data-flag="img/catalan.png">Català</a>
               </li>
-              <li>
+              <li id="eng">
                 <a href="./index.html" data-flag="img/england.png">English</a>
               </li>
             </ul>
@@ -246,7 +229,7 @@
   <div class="col-md-6">
     <div class="exp-column">
       <p class="exp-date">Oct-2024 <span>to</span> Present</p>
-      <h4 class="exp-company">IT Academy, Barcelona Activa, BCN</h4>
+      <h4 class="exp-company">IT Academy, Barcelona Activa, Barcelona, SPA</h4>
       <h4 class="exp-designation">Backend Developer</h4>
       <p class="exp-detail">
         Contributed to the development of the ITA-Wiki project, focusing
@@ -274,7 +257,7 @@
   <div class="col-md-6">
     <div class="exp-column">
       <p class="exp-date">02-Feb-2022 <span>to</span> 01-Oct-2024</p>
-      <h4 class="exp-company">Federal Café Gotic, BCN</h4>
+      <h4 class="exp-company">Federal Café Gotic, Barcelona, SPA</h4>
       <h4 class="exp-designation">General Manager</h4>
       <p class="exp-detail">
         Financial and Administrative Oversight <br />
@@ -295,7 +278,7 @@
     <div class="exp-column">
       <p class="exp-date">01-Mar-2021 <span>to</span> 01-Feb-2022</p>
       <h4 class="exp-company">
-        Xiringuito Escribà Empuriabrava, Girona, SPAIN
+        Xiringuito Escribà Empuriabrava, Girona, SPA
       </h4>
       <h4 class="exp-designation">General Manager</h4>
       <p class="exp-detail">
@@ -311,7 +294,7 @@
   <div class="col-md-6">
     <div class="exp-column">
       <p class="exp-date">01-Jun-2015 <span>to</span> 01-Dec-2020</p>
-      <h4 class="exp-company">La Burg, Barcelona, SPAIN</h4>
+      <h4 class="exp-company">La Burg, Barcelona, SPA</h4>
       <h4 class="exp-designation">General Manager</h4>
       <p class="exp-detail">
         Customer Experience and Staff Development <br />
@@ -334,7 +317,7 @@
           <header class="section-header">
             <h3 class="section-title">My Portfolio</h3>
             <p>
-              Here you can find my featured projects amd hackaton participations
+              Here you can find my featured projects, hackaton participations and my formation courses
             </p>
           </header>
 
@@ -415,7 +398,7 @@
               <div class="portfolio-wrap">
                 <figure>
                   <img src="img/nodejs-certificate-bootcamp.png" class="img-fluid" alt="" />
-                  <a href="img/portfolio-5.jpg" class="link-preview" data-lightbox="portfolio"
+                  <a href="img/nodejs-certificate-bootcamp.png" class="link-preview" data-lightbox="portfolio"
                     data-title="nodejs-certificate-bootcamp" title="Preview"><i class="fa fa-eye"></i></a>
                   <a href="./img/nodejs-certificate-bootcamp.png" class="link-details" title="More Details"><i
                       class="fa fa-link"></i></a>
