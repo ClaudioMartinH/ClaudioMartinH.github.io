@@ -173,6 +173,12 @@ h6 {
     padding: 2px 0;
     font-size: 26px;
   }
+  .aboutme {
+    text-align: left;
+  }
+  .section-header p {
+    text-align: center;
+  }
 }
 
 .header .social-nav {
