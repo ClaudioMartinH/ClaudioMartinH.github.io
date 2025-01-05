@@ -18,6 +18,14 @@
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
   <link href="../css/style.css" rel="stylesheet" />
+  <script>
+  fetch('https://api.countapi.xyz/hit/claudiomartinh.github.io/homepage')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('visit-counter').innerText = data.value;
+  });
+</script>
+</body>
 </head>
 
 <body>
@@ -479,6 +487,7 @@
     <div class="container">
       <div class="copyright">
         <p>Claudio Martin Herranz 2024</p>
+        <p>Visitas: <span id="visit-counter">0</span></p>
         <p hidden>
           &copy; Copyright <a href="https://htmlcodex.com">HTML Codex</a>. All
           Rights Reserved
