@@ -1,0 +1,169 @@
+{
+  "home": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Hello! I'm Claudio Martín Herranz",
+      "staticText": "I'm",
+      "professions": [
+        "a Web Developer",
+        "a Backend Developer",
+        "a Support Engineer"
+      ]
+    }
+  },
+  "about": {
+    "sectionTitle": "About Me",
+    "introductionTitle": "Introduction",
+    "introduction": "Hi! I'm Claudio Martin, a web developer based in Barcelona with 20+ years of experience leading teams in hospitality. Technology is my passion, and during 2024 I completed a web development bootcamp at ITAcademy. I specialize in backend development with Node.js and databases like MongoDB and MySQL/PostgreSQL. I also have frontend skills in HTML & CSS, basic React & Angular, and UI design. Currently I'm working as a Support Engineer specialized in Microsoft Office 365 Security & Compliance.",
+    "panels": {
+      "keySkills": "Key Skills",
+      "education": "Education",
+      "specializations": "Specializations",
+      "achievements": "Achievements",
+      "hobbies": "Hobbies"
+    },
+    "keySkills": [
+      "Team management",
+      "Real-time problem-solving",
+      "Working under pressure",
+      "Customer orientation"
+    ],
+    "education": [
+      "Microsoft SCIM Security & Compliance intensive formation 2025",
+      "Completed a web development bootcamp at ITAcademy 2024",
+      "Completed a MBA Business Management at EAE Business School 2013",
+      "Completed a 300h course in Construction Risk Management at Generalitat de Catalunya 2009"
+    ],
+    "specializations": [
+      "Backend: Node.js, MongoDB, MySQL/PostgreSQL",
+      "Frontend: HTML & CSS, basic React, UI design",
+      "Office365: Security & Compliance, SCIM, MDO, Exchange, Purview & EntraID"
+    ],
+    "achievements": [
+      "Finalist in NASA Space Apps Challenge 2024",
+      "Contributing to ITA Wiki with AI integration & database migrations 2024 - 2025",
+      "2nd place in Hackathon ITAcademy 2024"
+    ],
+    "hobbies": [
+      "I'm a dog lover, Logan is my loyal friend",
+      "My favorite music genres are Rock, Indie, House & Electronic",
+      "I also love sports like MotoGP, F1 & I used to play football as amateur"
+    ],
+    "callToAction": "Let's connect! I'm actively seeking new challenges.",
+    "connectButton": "Let's Connect!",
+    "frontendSkills": "Front End Skills",
+    "backendSkills": "Back End Skills",
+    "office365Skills": "Office365 Skills"
+  },
+  "experience": {
+    "title": "My Experience",
+    "remote": "Remote",
+    "onsite": "On Site",
+    "concentrix": {
+      "date": "Feb-2025 to Present",
+      "company": "Concentrix, A Coruña, Galicia, SPA",
+      "position": "Support Engineer",
+      "details": [
+        "SCIM: Security & Compliance Incident Management",
+        "Responsible for managing security and compliance incidents",
+        "Incident Analysis: Conducting thorough investigations",
+        "Cross-Functional Collaboration with IT teams",
+        "Implementing corrective measures",
+        "Specialist: MDO, Purview, EntraID, Exchange Online"
+      ]
+    },
+    "itacademy": {
+      "date": "Sept-2024 to Feb-2025",
+      "company": "IT Academy, Barcelona Activa, SPA",
+      "position": "Backend Developer",
+      "details": [
+        "Contributed to ITA-Wiki project development",
+        "Database Migrations: Designed and executed strategies",
+        "AI Integration: Implemented AI-powered features",
+        "Worked with Scrum/Agile Methodology"
+      ]
+    },
+    "federal": {
+      "date": "Feb 2022 - Feb 2024",
+      "company": "Federal Café Gotic, Barcelona, SPA",
+      "position": "General Manager",
+      "details": [
+        "Financial and Administrative Oversight",
+        "Budget management, cost control, and maximizing profitability",
+        "Analyzed sales reports and set financial goals",
+        "Implemented operational efficiency strategies",
+        "Marketing and promotional coordination",
+        "Inventory management and supply chain optimization"
+      ]
+    },
+    "xiringuito": {
+      "date": "Mar 2021 - Feb 2022",
+      "company": "Xiringuito Escribà Empuriabrava, SPA",
+      "position": "General Manager",
+      "details": [
+        "Leadership and Operations management",
+        "Oversaw daily restaurant operations",
+        "Maintained high standards of food quality",
+        "Led team of 10 staff members",
+        "Managed staff schedules and customer relations"
+      ]
+    },
+    "laburg": {
+      "date": "Jun 2015 - Dec 2020",
+      "company": "La Burg, Barcelona, SPA",
+      "position": "General Manager",
+      "details": [
+        "Customer Experience and Staff Development",
+        "Delivered exceptional customer experiences",
+        "Trained and mentored service staff",
+        "Built strong client relationships",
+        "Managed performance feedback systems"
+      ]
+    }
+  },
+
+    "projects": {
+      "title": "My Projects",
+      "filters": {
+        "all": "All",
+        "web-dev": "Web Dev",
+        "app-dev": "App Dev",
+        "cou-cer": "Courses & Certs"
+      },
+      "descriptions": {
+        "webdev": "Web Development",
+        "appdev": "App Development",
+        "certificate": "Certificates",
+        "hackathon": "Hackathon"
+      },
+      "titles": {
+        "chatapp": "ITAcademy Chat App",
+        "dicegame": "Dice game - Node-React-SQLite",
+        "activityapp": "Activity App",
+        "incloumap": "Hackathon - InclouMap - Finalist",
+        "nodecert": "NodeJs Bootcamp Certificate",
+        "nasachallenge": "NASA Space Apps Challenge 2024",
+        "hackathonso": "Hackathon 2024 - Finalist",
+        "javaGoCert": "Java & GoLang Certificates",
+        "itTalks": "iTtalks: Lifecycle & High Performance Developers"
+      },
+      "text": {
+        "chatapptext": "A chat application developed during the ITAcademy bootcamp, showcasing real-time communication features using Node.js and WebSocket.",
+        "dicegametext": "A fun dice game built with Node.js, React, and SQLite, demonstrating full-stack development skills.",
+        "activityapptext": "An activity tracking app that allows users to log and manage their daily activities.",
+        "incloumaptext": "A finalist project in a hackathon, focused on creating an inclusive map application.",
+        "nodecerttext": "Certification received after completing a comprehensive Node.js bootcamp.",
+        "nasachallengetext": "Participated in the NASA Space Apps Challenge 2024, contributing to innovative solutions for space exploration.",
+        "hackathonsoText": "Finalist in a hackathon event in 2024, showcasing problem-solving and development skills.",
+        "javaGoCertText": "Certificates obtained for completing courses in Java and GoLang programming languages.",
+        "itTalkstext": "A series of talks focused on the lifecycle of developers and high-performance practices in software development."
+      }
+    }
+  }
+  

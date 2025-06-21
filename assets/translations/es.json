@@ -1,0 +1,167 @@
+{
+  "home": {
+    "nav": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "title": "¡Hola! Soy Claudio Martín Herranz",
+      "staticText": "Soy",
+      "professions": [
+        "desarrollador web",
+        "desarrollador backend",
+        "ingeniero de soporte"
+      ]
+    }
+  },
+  "about": {
+    "sectionTitle": "Sobre mí",
+    "introductionTitle": "Introducción",
+    "introduction": "¡Hola! Soy Claudio Martín, desarrollador web en Barcelona con más de 20 años de experiencia liderando equipos en hostelería. La tecnología es mi pasión, y durante 2024 completé un bootcamp de desarrollo web en ITAcademy. Me especializo en desarrollo backend con Node.js y bases de datos como MongoDB y MySQL/PostgreSQL. También tengo conocimientos de frontend con HTML y CSS, React y Angular básicos, y diseño UI. Actualmente trabajo como Support Engineer especializado en Microsoft Office 365 Security & Compliance.",
+    "panels": {
+      "keySkills": "Habilidades clave",
+      "education": "Educación",
+      "specializations": "Especializaciones",
+      "achievements": "Logros",
+      "hobbies": "Aficiones"
+    },
+    "keySkills": [
+      "Gestión de equipos",
+      "Resolución de problemas en tiempo real",
+      "Trabajo bajo presión",
+      "Orientación al cliente"
+    ],
+    "education": [
+      "Formación intensiva en Microsoft SCIM Security & Compliance 2025",
+      "Bootcamp de desarrollo web en ITAcademy 2024",
+      "MBA en Dirección de Empresas en EAE Business School 2013",
+      "Curso de 300h en Gestión de Riesgos en Construcción (Generalitat de Catalunya) 2009"
+    ],
+    "specializations": [
+      "Backend: Node.js, MongoDB, MySQL/PostgreSQL",
+      "Frontend: HTML y CSS, React básico, diseño UI",
+      "Office365: Seguridad y Cumplimiento, SCIM, MDO, Exchange, Purview y EntraID"
+    ],
+    "achievements": [
+      "Finalista en el NASA Space Apps Challenge 2024",
+      "Colaborador en ITA Wiki con integración de IA y migraciones de base de datos 2024 - 2025",
+      "2.º puesto en el Hackathon de ITAcademy 2024"
+    ],
+    "hobbies": [
+      "Me encantan los perros, Logan es mi fiel amigo",
+      "Mis géneros musicales favoritos son Rock, Indie, House y Electrónica",
+      "También me gustan los deportes como MotoGP, F1 y solía jugar al fútbol como amateur"
+    ],
+    "callToAction": "¡Conectemos! Estoy buscando nuevos retos.",
+    "connectButton": "¡Conectemos!",
+    "frontendSkills": "Habilidades Front End",
+    "backendSkills": "Habilidades Back End",
+    "office365Skills": "Habilidades en Office365"
+  },
+  "experience": {
+    "title": "Mi Experiencia",
+    "remote": "Remoto",
+    "onsite": "Presencial",
+    "concentrix": {
+      "date": "Feb-2025 a Presente",
+      "company": "Concentrix, A Coruña, Galiza, ESP",
+      "position": "Ingeniero de Soporte",
+      "details": [
+        "SCIM: Gestión de Incidentes de Seguridad y Cumplimiento",
+        "Responsable de gestionar incidentes de seguridad y cumplimiento",
+        "Análisis de incidentes: realización de investigaciones exhaustivas",
+        "Colaboración transversal con equipos de TI",
+        "Implementación de medidas correctivas",
+        "Especialista: MDO, Purview, EntraID, Exchange Online"
+      ]
+    },
+    "itacademy": {
+      "date": "Sept-2024 a Feb-2025",
+      "company": "IT Academy, Barcelona Activa, ESP",
+      "position": "Desarrollador Backend",
+      "details": [
+        "Contribución al desarrollo del proyecto ITA-Wiki",
+        "Migraciones de base de datos: diseño y ejecución de estrategias",
+        "Integración de IA: implementación de funciones con inteligencia artificial",
+        "Trabajo con metodología Scrum/Agile"
+      ]
+    },
+    "federal": {
+      "date": "Feb 2022 - Feb 2024",
+      "company": "Federal Café Gotic, Barcelona, ESP",
+      "position": "Gerente General",
+      "details": [
+        "Supervisión financiera y administrativa",
+        "Gestión presupuestaria, control de costes y maximización de la rentabilidad",
+        "Análisis de informes de ventas y establecimiento de objetivos financieros",
+        "Implementación de estrategias de eficiencia operativa",
+        "Coordinación de marketing y promociones",
+        "Gestión de inventario y optimización de la cadena de suministro"
+      ]
+    },
+    "xiringuito": {
+      "date": "Mar 2021 - Feb 2022",
+      "company": "Xiringuito Escribà Empuriabrava, ESP",
+      "position": "Gerente General",
+      "details": [
+        "Liderazgo y gestión de operaciones",
+        "Supervisión de operaciones diarias del restaurante",
+        "Mantenimiento de altos estándares de calidad alimentaria",
+        "Dirección de un equipo de 10 empleados",
+        "Gestión de horarios y relaciones con clientes"
+      ]
+    },
+    "laburg": {
+      "date": "Jun 2015 - Dic 2020",
+      "company": "La Burg, Barcelona, ESP",
+      "position": "Gerente General",
+      "details": [
+        "Experiencia del cliente y desarrollo de personal",
+        "Entrega de experiencias excepcionales a clientes",
+        "Capacitación y mentoría del personal de servicio",
+        "Construcción de relaciones sólidas con clientes",
+        "Gestión de sistemas de feedback de desempeño"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "filters": {
+      "all": "Todos",
+      "web-dev": "Desarrollo Web",
+      "app-dev": "Desarrollo App",
+      "cou-cer": "Certificados"
+    },
+    "descriptions": {
+      "webdev": "Desarrollo Web",
+      "appdev": "Desarrollo de Apps",
+      "certificate": "Certificados",
+      "hackathon": "Hackathon"
+    },
+    "titles": {
+      "chatapp": "Chat App de ITAcademy",
+      "dicegame": "Juego de dados - Node-React-SQLite",
+      "activityapp": "Aplicación de Actividades",
+      "incloumap": "Hackathón - InclouMap - Finalista",
+      "nodecert": "Certificado Bootcamp NodeJs",
+      "nasachallenge": "NASA Space Apps Challenge 2024",
+      "hackathonso": "Hackathón 2024 - Finalista",
+      "javaGoCert": "Certificados de Java & GoLang",
+      "itTalks": "iTtalks: Ciclo de Vida & Alto Rendimiento"
+    },
+    "text": {
+      "chatapptext": "Aplicación de chat desarrollada con Node.js y React, enfocada en la comunicación en tiempo real.",
+      "dicegametext": "Juego de dados interactivo utilizando Node.js, React y SQLite para la gestión de datos.",
+      "activityapptext": "Aplicación para gestionar actividades diarias, desarrollada con tecnologías modernas.",
+      "incloumaptext": "Proyecto finalista en el Hackathon InclouMap, centrado en la inclusión social a través de tecnología.",
+      "nodecerttext": "Certificado obtenido tras completar el Bootcamp de Node.js en ITAcademy.",
+      "nasachallengetext": "Participación destacada en el NASA Space Apps Challenge 2024.",
+      "hackathonsoText": "Finalista en el Hackathon 2024, demostrando habilidades innovadoras en desarrollo.",
+      "javaGoCertText": "Certificados obtenidos en cursos de Java y GoLang, ampliando mis competencias técnicas.",
+      "itTalksText": "Participación en iTtalks sobre ciclo de vida y alto rendimiento de desarrolladores."
+    }
+  }
+}
